@@ -5,6 +5,5 @@ category: crypto
 description: |
     Кто-то записал флаг на RFID-метку(111.222.333.444:5555) в надежде, что его сможет прочесть только подлинный считыватель(111.222.333.444:6666.
     К счастью, у вас есть <a href="https://www.dropbox.com/s/uunuvhaz84hd0p4/obscurity.7z?dl=0">исходники</a>. 
-
 name: Obscurity
 price: ?!
