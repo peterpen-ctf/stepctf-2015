@@ -1,9 +1,8 @@
 ---
-answer_regex: STCTF#f1a9f1a9f1a9f1a9f1a9f1a9f1a9f1a9
+answer_regex: STCTF#W17HL0V3Y0URDUCMACDUCKD0TF1G#
 author: patrick
 category: stegano
 description: |
   В чем секрет Дональд Дака?!
-  
 name: Makduck
 price: 200
