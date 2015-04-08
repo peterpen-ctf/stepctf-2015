@@ -6,6 +6,6 @@ reader_port=6543
 trap 'jobs -p | xargs kill -s 15' EXIT
 
 make tag reader || exit 1
-./service.py $tag_port ./tag &
-./service.py $reader_port ./reader &
+netcat -lp $tag_port --continuous -e ./tag &
+netcat -lp $reader_port --continuous -e ./reader &
 wait
