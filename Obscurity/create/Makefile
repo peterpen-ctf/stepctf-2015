@@ -1,7 +1,7 @@
 .PHONY: all
 # секретный ключ и флаг
 key = 0x9d8d8d9d24ll
-flag = "Good job! Congratulations! Your flag is: STCTF\#chocolate_chip_c00kies_arrive_on_monday"
+flag = "Good job! Congratulations! Your flag is: STCTF\#chocolate_chip_c00kies_arrive_on_monday\#"
 
 # файлы, включаемые в архив
 given_files = cipher.h tag.c reader.c
