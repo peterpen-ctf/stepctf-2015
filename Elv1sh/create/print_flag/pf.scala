@@ -10,11 +10,11 @@ object Pf {
     scala.io.Source.fromFile(filename).mkString
   }
 
-  def getFilename(): String = 
+  def getFilename(): String =
     Thread.currentThread.getStackTrace()(3).getFileName()
 
-  def printFlag(suffix: String) = 
-    println("STCTF#" + suffix)
+  def printFlag(suffix: String) =
+    println("STCTF#" + suffix + "#")
 
   def generateFlagValue(): String = {
     val source = readSource()
@@ -25,7 +25,7 @@ object Pf {
     tempValue match  {
       case x if x.startsWith("a") => "don't think so"
       case y if y.endsWith("8") => "no, thank you"
-      case z if z.contains("b2") => getDigest(z).substring(10, 22)
+      case z if z.contains("c9") => getDigest(z).substring(10, 22)
       case _  => "really?"
     }
   }
