@@ -1,15 +1,10 @@
 FROM ubuntu:14.04
 MAINTAINER tonyo
 
-RUN /bin/rm -f \
-    /bin/less /usr/bin/tail /usr/bin/head /bin/*grep* \
-    /usr/bin/*grep* /etc/alternatives/v* /usr/bin/xxd \
-    /usr/bin/python* /bin/cat /usr/bin/perl* /usr/bin/vi* /bin/more \
-    /bin/sed /usr/bin/*diff* /usr/bin/curl /usr/bin/wget /usr/bin/base64 \
-  && useradd -m user
-# /usr/bin/cut?
-# /usr/bin/nl?
+RUN useradd -m box
 
-COPY flag.txt /home/user/flag.txt
+COPY bootstrap.sh /bootstrap.sh
+RUN /bin/bash bootstrap.sh && /bin/rm bootstrap.sh
 
-CMD cd /home/user && while true; do su user; done
+
+CMD cd /home/box && echo 123 && su box
