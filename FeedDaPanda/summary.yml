@@ -1,0 +1,9 @@
+---
+answer_regex: STCTF#D0UL1K3C00K135GUYZ#
+author: patrick
+category: web
+description: |
+  Артуру нравились панды, поэтому он подкармливал их, и за это, они рассказывали ему все свои секреты.
+  Мы обнаружили следы панд здесь: http://server:13371.
+name: FeedDaPanda
+price: 100
