@@ -1,0 +1,8 @@
+gdb rev100 <<END
+b *0x80485bd
+r
+call 0x8048541(1)
+x/s 0x804a0c4
+q
+y
+END
