@@ -1,0 +1,21 @@
+$ cp cert* /etc/nginx
+$ uname -a > index.html
+$ cd /etc/nginx
+
+Проверяем, что в sites-enabled/default есть такие строчки:
+
+server {
+        listen 443;
+        server_name localhost;
+
+        root /home/box/;
+        index index.html index.htm;
+
+        ssl on;
+        ssl_certificate cert.pem;
+        ssl_certificate_key cert.key;
+}
+
+Рестартим nginx:
+
+$ sudo service nginx restart
