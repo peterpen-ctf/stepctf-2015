@@ -1,0 +1,10 @@
+---
+answer_regex: STCTF#AUDACTY7H32DHAPY#
+author: awengar
+category: reverse
+description: |
+К нам пришла очень вредная и капризная программа со скверным характером.
+Нужно поскорее вытащить из нее верный ключ.
+  
+name: UglyBinary
+price: 100
