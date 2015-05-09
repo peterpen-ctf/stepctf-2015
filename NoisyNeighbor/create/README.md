@@ -1,9 +1,11 @@
 # NoisyNeighbor
 
 ## RF Transmitter
+![RF Transmitter](transmitter.jpg)
 Радиопередатчик 433 МГц, подключенный к Raspberry Pi:
 
 ## RF Receiver
+![RF Receiver](receiver.jpg)
 Радиоприемник 433 МГц, подключенный через резистор в микрофонный вход аудиокарты:
 
 ## Signal Generation
