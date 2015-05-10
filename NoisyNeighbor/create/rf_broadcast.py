@@ -5,7 +5,7 @@ import subprocess
 from time import sleep
 
 
-FLAG = 'STCTF#uN1oCKd00r'
+FLAG = 'STCTF#uN1oCKd00r#'
 
 MAX_COMMAND_INTERVAL = 10
 
