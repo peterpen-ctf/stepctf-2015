@@ -21,18 +21,18 @@ object pf {
     assert(sourcedigest.length == 40)
     val salt = 42
     val tempvalue = getdigest(salt.toString() + sourcedigest)
-    tempvalue match  {
+    tempvalue match {
       case x if x.startsWith("aa") => "don't think so"
       case y if y.endsWith("cc") => "no, thank you"
-      case z if z.contains("56811") => getdigest(z).substring(10, 22)
-      case _  => "really ?"
+      case z if z.contains("26018") => getdigest(z).substring(10, 22)
+      case _ => "really ?"
     }
   }
 
   def main(args: Array[String]) = {
     val flagvalue = generateflagvalue()
     if (flagvalue.contains(' '))
-      println("Invalid flag")
+      println("invalid flag")
     else
       printflag(flagvalue)
   }
