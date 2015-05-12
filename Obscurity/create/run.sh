@@ -5,7 +5,6 @@ reader_port=6543
 # Для завершения потомков по Ctrl+C
 trap 'jobs -p | xargs kill -s 15' EXIT
 
-make tag reader || exit 1
 ncat -lp $tag_port -k -e ./tag &
 ncat -lp $reader_port -k -e ./reader &
 wait
