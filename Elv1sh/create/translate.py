@@ -13,6 +13,7 @@ def parse_table():
         options.append(char.lower())
         tr[char.upper()] = options
 
+
 def print_tr():
     for key in sorted(tr.keys()):
         print("{} -> {}".format(key, tr[key]))
@@ -27,7 +28,7 @@ def translate_source(filename):
             res += new_char
         else:
             res += c
-    print(res)
+    print(res, end='')
 
 parse_table()
 translate_source('print_flag/pf.scala')

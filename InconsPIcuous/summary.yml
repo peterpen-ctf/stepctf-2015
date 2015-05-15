@@ -3,7 +3,7 @@ answer_regex: STCTF#P1_iSs_3141592etC#
 author: tonyo
 category: trivia/forensics?
 description: |
-  Зазвучала необычная <a href="https://www.youtube.com/watch?v=OMq9he-5HUU">музыка</a>, после чего в комнату вошел человек странного вида в футболке, на которой было написано "philipl", и положил на стол непонятное <a href="https://www.dropbox.com/s/ngmffvcnu10yugq/metadata.zip?dl=0">сообщение</a>. После этого он вышел, не произнеся ни слова.
+  Зазвучала необычная <a href="https://www.youtube.com/watch?v=OMq9he-5HUU">музыка</a>, после чего в комнату вошел человек странного вида в футболке, на которой было написано "philipl", и положил на стол непонятное <a href="https://stepic.org/media/attachments/lesson/11427/metadata.zip">сообщение</a>. После этого он вышел, не произнеся ни слова.
 
 name: InconsPIcuous
 price: 200

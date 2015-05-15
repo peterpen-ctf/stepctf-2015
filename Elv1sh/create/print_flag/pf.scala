@@ -1,38 +1,39 @@
+object pf {
+  val md = java.security.MessageDigest.getInstance("sha-1")
 
-object Pf {
-  val md = java.security.MessageDigest.getInstance("SHA-1")
+  def getdigest(str: String): String =
+    md.digest(str.getBytes("utf-8")).map("%02x".format(_)).mkString
 
-  def getDigest(str: String): String =
-    md.digest(str.getBytes("UTF-8")).map("%02x".format(_)).mkString
-
-  def readSource(): String = {
-    val filename = getFilename()
+  def readsource(): String = {
+    val filename = getfilename()
     scala.io.Source.fromFile(filename).mkString
   }
 
-  def getFilename(): String =
+  def getfilename(): String =
     Thread.currentThread.getStackTrace()(3).getFileName()
 
-  def printFlag(suffix: String) =
-    println("STCTF#" + suffix + "#")
+  def printflag(flag: String) =
+    println("STCTF#" + flag + "#")
 
-  def generateFlagValue(): String = {
-    val source = readSource()
-    val sourceDigest = getDigest(source)
-    assert(sourceDigest.length == 40)
+  def generateflagvalue(): String = {
+    val source = readsource()
+    val sourcedigest = getdigest(source)
+    assert(sourcedigest.length == 40)
     val salt = 42
-    val tempValue = getDigest(salt.toString() + sourceDigest)
-    tempValue match  {
-      case x if x.startsWith("a") => "don't think so"
-      case y if y.endsWith("8") => "no, thank you"
-      case z if z.contains("c9") => getDigest(z).substring(10, 22)
-      case _  => "really?"
+    val tempvalue = getdigest(salt.toString() + sourcedigest)
+    tempvalue match {
+      case x if x.startsWith("aa") => "don't think so"
+      case y if y.endsWith("cc") => "no, thank you"
+      case z if z.contains("26018") => getdigest(z).substring(10, 22)
+      case _ => "really ?"
     }
   }
 
   def main(args: Array[String]) = {
-    val flagValue = generateFlagValue()
-    printFlag(flagValue)
+    val flagvalue = generateflagvalue()
+    if (flagvalue.contains(' '))
+      println("invalid flag")
+    else
+      printflag(flagvalue)
   }
 }
-

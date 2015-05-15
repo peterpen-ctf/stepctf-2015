@@ -1,8 +1,8 @@
 ---
-answer_regex: STCTF#4964af130f17#
+answer_regex: STCTF#03ec137ef0a7#
 author: tonyo
-category: crypto/forensics/trivia?
+category: crypto
 description: |
-  Коля внезапно проснулся. Часы показывали "5:29", но на улице всё еще было темно. Коля собрался было опять заснуть, как вдруг на потолке стали проступать <a href="https://www.dropbox.com/s/bglpnxyw5k7ov4a/message?dl=0">загадочные символы</a>.
+  Коля внезапно проснулся. Часы показывали "5:29", но на улице всё еще было темно. Коля собрался было опять заснуть, как вдруг на потолке стали проступать <a href="https://stepic.org/media/attachments/lesson/11426/message">загадочные символы</a>.
 name: Elv1sh
-price: 200
+price: 300
