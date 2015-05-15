@@ -3,6 +3,6 @@ answer_regex: STCTF#4285c6bbc998#
 author: tonyo
 category: forensics
 description: |
-  А как вы генерируете <a href="https://www.dropbox.com/s/k0e44vgwe8lnbpz/capture.pcap?dl=0">пароли</a>?
+  А как вы генерируете <a href="https://stepic.org/media/attachments/lesson/11428/capture.pcap">пароли</a>?
 name: Passgen
 price: 200
