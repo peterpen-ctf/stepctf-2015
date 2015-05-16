@@ -121,6 +121,47 @@ unsigned int hash2 (char * key_val_ref){
 	a[1] ^ 0xFA ^ 0xAF ^ a[6] ^ 0x65 ^ 0x65 = 0x02
 	a[2] ^ 0xCA ^ a[7] ^ 0xEF ^ 0x24 = 0x22
 	a[3] ^ a[4] ^ 0x5E ^ 0xAC = 0xF5
-8 уравнений, 8 неизвестных. Ключ 53Kur3dh удовлетворяет всем этим условиям.
+8 уравнений, 8 неизвестных. Ключ 53Kur3dh удовлетворяет всем этим условиям. Всего тут 256 верных последовательностей
+байт, среди которых нужно выбрать читаемую строчку.
+4) Решение на python
+#!/usr/bin/python
+
+def testt(s):
+        for c in s:
+                if ord(c) >= ord('0') and ord(c) <='z':
+                        continue
+                else:
+                        return 0
+        return 1
+a=['','','','','','','','']
+for c in range(127):
+        a[0] = chr(c)
+        a[6] = chr(0xFE ^ ord(a[0]) ^ 0xC7 ^ 0x96 ^ 0xFE)
+        a[5] = chr(ord(a[0]) ^ 0xAC ^  0xFC ^ 0x45 ^ 0x13)
+        a[3] = chr(ord(a[5]) ^ 0x5C ^ 0xF5  ^ 0xef)
+        a[1] = chr(0xFA ^ 0xAF ^ ord(a[6]) ^ 0x65 ^ 0x65 ^ 0x02)
+        a[7] = chr(ord(a[1]) ^ 0xCA ^ 0xBE ^ 0x83 ^ 0x13 ^ 0xbf)
+        a[4] = chr(ord(a[3]) ^ 0x5E ^ 0xAC ^ 0xF5)
+        a[2] = chr(0xCA ^ ord(a[7]) ^ 0xEF ^ 0x24 ^ 0x22)
+        if testt(a):
+                print "".join(a)
+Дает 16 возможных ключей
+06Npw6am
+17Oqv7`l
+24Lru4co
+35Mst5bn
+42Jts2ei
+53Kur3dh - верный ключ.
+60Hvq0gk
+71Iwp1fj
+8>Fx>ie
+9?Gy~?hd
+:<Dz}<kg
+;=E{|=jf
+<:B|{:ma
+=;C}z;l`
+>8@~y8oc
+?9Ax9nb
+
 </pre>
 </body>
