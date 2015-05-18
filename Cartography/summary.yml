@@ -1,0 +1,8 @@
+---
+answer_regex: STCTF#WellDumped#
+author: spy
+category: admin
+description: |
+  Восстановите случайно удаленный файл /home/box/flag.txt. Кажется, кто-то недавно его открывал и читал.
+name: Cartography
+price: 300
