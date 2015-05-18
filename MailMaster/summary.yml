@@ -1,0 +1,9 @@
+---
+answer_regex: STCTF#URTrueSMTPmaster#
+author: spy
+category: admin
+description: |
+  Настройте почтовый сервер, чтобы принять письмо с флагом от проверяющей системы.
+  По нажатию на "Submit/Отправить" проверяющая система пробует через ваш сервер отправить e-mail по протоколу SMTP (порт 25) на адрес box@2015.ppctf.net. Примите письмо, найдите флаг и запишите его в файл /home/box/flag.txt
+name: MailMaster
+price: 400
